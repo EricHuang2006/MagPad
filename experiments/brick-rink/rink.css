@@ -1,0 +1,26 @@
+:root{color-scheme:dark;--ink:#102c35;--cream:#f5efda;--mint:#86e3c4;--orange:#ff9a69;font:16px/1.4 "Barlow",system-ui,sans-serif;color:var(--cream)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 28% 4%,#21444b 0%,#102c35 50%,#091e27 100%)}
+main{max-width:min(1120px,calc((100svh - 217px)*1.923 + 50px));min-width:min(100%,680px);margin:auto;padding:18px 22px 24px}
+header,.brand,.arcade,.scoreboard,.team,.deck,.deck>span,footer,.actions{display:flex;align-items:center}
+header,footer,.deck{justify-content:space-between}
+header{margin:0 1px 11px}.brand{gap:11px}h1,h2,h3,p{margin:0}
+h1,h2,.teamname,.primary{font-family:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;font-weight:950;text-transform:uppercase;font-style:italic}
+h1{font-size:clamp(30px,3.5vw,48px);line-height:1;letter-spacing:-.075em}
+.mark{position:relative;width:37px;height:32px;transform:skew(-16deg);border-bottom:8px solid var(--mint)}
+.mark i{position:absolute;background:var(--orange);height:8px;width:15px;top:4px;left:4px}.mark i:nth-child(2){left:22px}.mark i:nth-child(3){left:10px;top:15px;width:25px}
+.arcade{font:700 .76rem monospace;letter-spacing:.14em;gap:7px}.arcade b{border:1px solid #8da69d;border-radius:3px;padding:3px 5px}
+.cabinet{background:#193941;border:1px solid #67847e;border-radius:14px;padding:0 12px;box-shadow:0 12px 26px #06182066,inset 0 2px #ffffff1c}
+.scoreboard{justify-content:center;gap:clamp(20px,6vw,90px);padding:8px 0}.team{gap:16px}.teamname{font-size:1.1rem;letter-spacing:.08em}.team strong,.clock b{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.team strong{font-size:clamp(30px,3vw,44px);line-height:1}.home{color:var(--mint)}.away{color:var(--orange)}.clock{display:grid;text-align:center;min-width:94px}.clock small{font:700 .67rem monospace;letter-spacing:.1em;text-transform:uppercase;color:#bbcec6}.clock b{font-size:1.35rem;line-height:1.15}
+.field{position:relative;overflow:hidden;aspect-ratio:1000/520;border:5px solid #09252c;border-radius:10px;background:#f1e8cb}.field canvas{width:100%;height:100%;display:block;touch-action:none}
+.overlay{position:absolute;inset:0;display:grid;place-items:center;background:#17322d17}.card{max-width:90%;padding:clamp(14px,2.4vw,30px);background:#10343b;color:var(--cream);text-align:center;border:1px solid #57776c;border-radius:5px;box-shadow:5px 5px 0 #0e333652}
+h2{font-size:clamp(24px,4vw,56px);line-height:1;letter-spacing:-.055em}.card p{margin:10px auto 16px;max-width:32ch;color:#e1e7d8}
+button{cursor:pointer;font:700 .91rem system-ui,sans-serif;border:1px solid #77938b;color:var(--cream);background:transparent;padding:7px 14px;border-radius:5px}
+button:hover:enabled{background:#31565b}button:focus-visible{outline:3px solid var(--orange);outline-offset:3px}button:disabled{opacity:.53;cursor:default}
+.primary{color:var(--ink);background:var(--mint);border:0;padding:9px 24px;font-size:1.12rem;letter-spacing:.04em}.primary:hover:enabled{background:#b8f3d5}
+.deck{height:39px;font-size:.88rem;color:#d5e4da}.deck>span{gap:8px}.lamp{width:8px;height:8px;background:var(--mint);border-radius:50%}.deck button{font-size:.8rem;padding:3px 12px}
+footer{margin:14px 1px 0;gap:12px}h3{font-size:.95rem}footer p{color:#bed1cb;font-size:.88rem;margin-top:2px}.actions{gap:8px;flex-shrink:0}.actions button{background:#1d4047}
+#call{position:absolute;top:15%;left:50%;transform:translateX(-50%);color:var(--cream);background:#13323c;padding:6px 14px;border-radius:4px;font-weight:800;pointer-events:none}
+[hidden]{display:none!important}
+@media(max-width:650px){main{padding:12px 8px}.cabinet{padding:0 4px}.arcade{font-size:.63rem}.field{border-width:3px}.scoreboard{gap:15px}.team{gap:8px}.teamname{font-size:.85rem}.card p{font-size:.85rem;margin:5px auto 9px}.card{padding:11px 15px}.primary{font-size:.9rem;padding:6px 18px}footer{align-items:flex-start;flex-direction:column}.actions{flex-wrap:wrap}.deck{padding:0 5px}}

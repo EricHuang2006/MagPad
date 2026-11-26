@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102d36"><title>Brick Rink · MagPad Arcade</title>
+  <link rel="icon" href="data:,"><link rel="stylesheet" href="rink.css">
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span><h1>Brick Rink</h1></div>
+    <div class="arcade">MAGPAD <b>ARCADE</b></div>
+  </header>
+  <section class="cabinet" aria-label="Air hockey rink">
+    <div class="scoreboard">
+      <div class="team home"><span class="teamname">You</span><strong id="home">00</strong></div>
+      <div class="clock"><small id="period">Match clock</small><b id="time">1:30</b></div>
+      <div class="team away"><strong id="away">00</strong><span class="teamname">CPU</span></div>
+    </div>
+    <div class="field" id="field">
+      <canvas aria-label="Air hockey table. You defend the left goal. Move with the magnet, pointer or arrow keys." width="1000" height="520"></canvas>
+      <div class="overlay" id="overlay">
+        <div class="card">
+          <h2 id="title">Break the line.</h2>
+          <p id="hint">Smash the orange bricks. Shoot through the gap.</p>
+          <button id="play" class="primary">Drop puck</button>
+        </div>
+      </div>
+      <div id="call" hidden></div>
+    </div>
+    <div class="deck"><span><i class="lamp"></i><span id="input">Pointer / arrow keys</span></span><button id="pause" disabled>Pause</button></div>
+  </section>
+  <footer>
+    <div><h3>Magnetic controller</h3><p id="status" role="status">Move the magnet on the pad to control the teal striker.</p></div>
+    <div class="actions"><button id="connect">Connect MagPad</button><button id="measure" hidden>Measure background</button></div>
+  </footer>
+</main>
+<script type="module" src="game.js"></script>
+</body>
+</html>

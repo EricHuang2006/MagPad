@@ -45,6 +45,16 @@ export MAGPAD_CALIBRATION="$PWD/grid-5x5-run2.csv"
 
 Measure the background once more after flashing. The new map stays on the board across power cycles. In a new shell, set `MAGPAD_CALIBRATION` again before future builds to keep using this CSV. The build default is `grid-5x5-run1.csv`.
 
+## Compare mesh and KNN accuracy
+
+Run both estimators offline on the same 5×5 capture. Use the bundled run below or substitute your new CSV.
+
+```sh
+python3 compare_estimators.py grid-5x5-run1.csv
+```
+
+The first comparison uses all 25 calibration marks and scores the separately recorded cell centers. The bundled run contains one of the 16 centers. The second comparison uses just nine calibration marks and tests the other 16 marks from the same pass. Each error is the distance in millimeters between a marked location and the estimate from its mean background-corrected field.
+
 ## File reference
 
 | File | What it does |

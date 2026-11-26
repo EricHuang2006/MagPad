@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alder Narrows · MagPad Arcade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand"><span class="logo" aria-hidden="true">≈</span> MagPad <i>Arcade</i></div>
+    <div class="connection"><span id="source"><b class="lamp"></b> Keyboard</span><button id="connect">Connect MagPad</button><button id="baseline" hidden>Measure background</button></div>
+  </header>
+  <section id="stage" aria-label="Alder Narrows river course">
+    <canvas id="river" aria-label="Three-dimensional view from behind the boat"></canvas>
+    <div class="hud">
+      <div><small>Distance</small><strong id="distance">000</strong> <em>/ 600 m</em></div>
+      <div><small>Speed</small><strong id="speed">0</strong> <em>m/s</em></div>
+      <div><small>Time</small><strong id="timer">0:00.0</strong></div>
+      <button id="pause" hidden>Pause</button>
+    </div>
+    <div id="panel">
+      <span id="eyebrow">River Run</span>
+      <h1 id="title">Alder Narrows</h1>
+      <p id="message">Pilot the 600 m course. Dodge the rocks and reach the finish in the fastest time.</p>
+      <button id="launch">Launch boat <span aria-hidden="true">→</span></button>
+    </div>
+    <div class="progress" aria-label="Course progress"><span id="progress"></span></div>
+  </section>
+  <footer>
+    <div><strong id="mode">Keyboard controls</strong><span id="instructions"><kbd>←</kbd><kbd>→</kbd> Steer &nbsp; <kbd>↑</kbd><kbd>↓</kbd> Speed</span></div>
+    <p id="status" role="status">Ready to launch.</p>
+  </footer>
+</main>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
